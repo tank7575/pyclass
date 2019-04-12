@@ -1,0 +1,74 @@
+PS C:\Users\gtanke\pydir> python
+Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:59:51) [MSC v.1914 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import ex25
+>>> sentence = "all good things come to those who wait."
+>>> words = ex25.break_words(senttence)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'senttence' is not defined
+>>> words = ex25.break_words(sentence)
+>>> break_words all good things come to those who wait.
+<<< exit break_words
+>>> words
+['all', 'good', 'things', 'come', 'to', 'those', 'who', 'wait.']
+>>> sorted_words = ex25.sort_words(words)
+>>> sort_words ['all', 'good', 'things', 'come', 'to', 'those', 'who', 'wait.']
+>>> sorted_words
+['all', 'come', 'good', 'things', 'those', 'to', 'wait.', 'who']
+>>> ex25.print_first_word(words)
+>>> print_first_word ['all', 'good', 'things', 'come', 'to', 'those', 'who', 'wait.']
+all
+<<< exit print_first_word
+>>> ex25.print_last_word(words)
+>>> print_last_word ['good', 'things', 'come', 'to', 'those', 'who', 'wait.']
+wait.
+<<< exit print_last_word
+>>> words
+['good', 'things', 'come', 'to', 'those', 'who']
+>>> ex25.print_first_word(sorted_words)
+>>> print_first_word ['all', 'come', 'good', 'things', 'those', 'to', 'wait.', 'who']
+all
+<<< exit print_first_word
+>>> ex25.print_last_word(sorted_words)
+>>> print_last_word ['come', 'good', 'things', 'those', 'to', 'wait.', 'who']
+who
+<<< exit print_last_word
+>>> ex25.print_first_word(sorted_words)
+>>> print_first_word ['come', 'good', 'things', 'those', 'to', 'wait.']
+come
+<<< exit print_first_word
+>>> sorted_words
+['good', 'things', 'those', 'to', 'wait.']
+>>> sorted_words = ex25.sort_sentence(sentence)
+>>> sort_sentence all good things come to those who wait.
+>>> break_words all good things come to those who wait.
+<<< exit break_words
+>>> sort_words ['all', 'good', 'things', 'come', 'to', 'those', 'who', 'wait.']
+>>> sorted_words
+['all', 'come', 'good', 'things', 'those', 'to', 'wait.', 'who']
+>>> ex25.print_first_and_last(sentence)
+>>> print_first_and_last all good things come to those who wait.
+>>> break_words all good things come to those who wait.
+<<< exit break_words
+>>> print_first_word ['all', 'good', 'things', 'come', 'to', 'those', 'who', 'wait.']
+all
+<<< exit print_first_word
+>>> print_last_word ['good', 'things', 'come', 'to', 'those', 'who', 'wait.']
+wait.
+<<< exit print_last_word
+<<< print_first_and_last
+>>> ex25.print_first_and_last_sorted(sentence)
+>>> print_first_and_last_sorted all good things come to those who wait.
+>>> sort_sentence all good things come to those who wait.
+>>> break_words all good things come to those who wait.
+<<< exit break_words
+>>> sort_words ['all', 'good', 'things', 'come', 'to', 'those', 'who', 'wait.']
+>>> print_first_word ['all', 'come', 'good', 'things', 'those', 'to', 'wait.', 'who']
+all
+<<< exit print_first_word
+>>> print_last_word ['come', 'good', 'things', 'those', 'to', 'wait.', 'who']
+who
+<<< exit print_last_word
+<<< print_first_and_last_sorted
+>>>

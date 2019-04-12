@@ -1,0 +1,43 @@
+import getpass
+import telnetlib
+
+HOST = "192.168.122.2"
+user = input("Enter your telnet username: ")
+password = getpass.getpass()
+
+tn = telnetlib.Telnet(HOST)
+
+tn.read_until(b"Username: ")
+tn.write(user.encode('ascii') + b"\n")
+if password:
+    tn.read_until(b"Password: ")
+    tn.write(password.encode('ascii') + b"\n")
+
+tn.write(b"enable\n")
+tn.write(b"password\n")
+tn.write(b"conf t\n")
+tn.write(b"inter l0\n")
+tn.write(b"ip address 1.1.1.1 255.255.255.255\n")
+tn.write(b"inter l1\n")
+tn.write(b"ip address 2.2.2.2 255.255.255.255\n")
+tn.write(b"line console 0\n")
+tn.write(b"password password\n")
+tn.write(b"login\n")
+tn.write(b"logging synchronous\n")
+tn.write(b"exec-timeout 0 0\n")
+tn.write(b"line vty 0 15\n")
+tn.write(b"login local\n")
+tn.write(b"transport input all\n")
+tn.write(b"username gtanke secret password\n")
+tn.write(b"service password-encryption\n")
+tn.write(b"ip domain-name .com\n")
+tn.write(b"no ip domain-lookup\n")
+tn.write(b"crypto key generate rsa\n")
+tn.write(b"1024\n")
+tn.write(b"ip ssh version 2\n")
+tn.write(b"banner motd +HI+\n")
+tn.write(b"end\n")
+tn.write(b"wr mem\n")
+tn.write(b"exit\n")
+
+print(tn.read_all().decode('ascii'))

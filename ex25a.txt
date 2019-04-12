@@ -1,0 +1,45 @@
+PS C:\Users\gtanke\pydir> python ex25b.py
+>>> break_words All good things come to those who wait.
+<<< exit break_words
+>>> sort_words ['All', 'good', 'things', 'come', 'to', 'those', 'who', 'wait.']
+>>> print_first_word ['All', 'good', 'things', 'come', 'to', 'those', 'who', 'wait.']
+All
+<<< exit print_first_word
+>>> print_last_word ['good', 'things', 'come', 'to', 'those', 'who', 'wait.']
+wait.
+<<< exit print_last_word
+>>> print_first_word ['All', 'come', 'good', 'things', 'those', 'to', 'wait.', 'who']
+All
+<<< exit print_first_word
+>>> print_last_word ['come', 'good', 'things', 'those', 'to', 'wait.', 'who']
+who
+<<< exit print_last_word
+>>> sort_sentence All good things come to those who wait.
+>>> break_words All good things come to those who wait.
+<<< exit break_words
+>>> sort_words ['All', 'good', 'things', 'come', 'to', 'those', 'who', 'wait.']
+>>> print_first_and_last All good things come to those who wait.
+>>> break_words All good things come to those who wait.
+<<< exit break_words
+>>> print_first_word ['All', 'good', 'things', 'come', 'to', 'those', 'who', 'wait.']
+All
+<<< exit print_first_word
+>>> print_last_word ['good', 'things', 'come', 'to', 'those', 'who', 'wait.']
+wait.
+<<< exit print_last_word
+<<< print_first_and_last
+>>> print_first_and_last_sorted All good things come to those who wait.
+>>> sort_sentence All good things come to those who wait.
+>>> break_words All good things come to those who wait.
+<<< exit break_words
+>>> sort_words ['All', 'good', 'things', 'come', 'to', 'those', 'who', 'wait.']
+>>> print_first_word ['All', 'come', 'good', 'things', 'those', 'to', 'wait.', 'who']
+All
+<<< exit print_first_word
+>>> print_last_word ['come', 'good', 'things', 'those', 'to', 'wait.', 'who']
+who
+<<< exit print_last_word
+<<< print_first_and_last_sorted
+PS C:\Users\gtanke\pydir>
+
+
